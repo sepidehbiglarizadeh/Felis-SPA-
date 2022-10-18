@@ -3,6 +3,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #f1eae4;
 }
 
 h1,
@@ -11,9 +12,12 @@ h3 {
   font-family: "Oswald", sans-serif;
 }
 
-.app {
-  background-color: #f1eae4;
+a {
+  text-decoration: none;
   color: #1d1b19;
-  height: 100vh;
+}
+
+.app {
+  color: #1d1b19;
   font-size: 1.5rem;
 }

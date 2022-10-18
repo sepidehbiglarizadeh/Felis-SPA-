@@ -16,10 +16,6 @@
     cursor: pointer;
 }
 
-.navigation li:hover {
-    font-weight: bold;
-}
-
 .closeIcon{
     text-align: right;
 }
