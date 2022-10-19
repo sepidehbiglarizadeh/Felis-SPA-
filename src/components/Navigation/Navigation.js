@@ -1,5 +1,7 @@
 import styles from "./Navigation.module.css";
 import { MdClose } from "react-icons/md";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const items = [
   { name: "Home", to: "/" },
@@ -9,23 +11,33 @@ const items = [
   { name: "Profile", to: "/profile" },
 ];
 
-const Navigation = ({navRef}) => {
-
-  const closeMenu=()=>{
-    navRef.current.style.right= "-600px";
-    navRef.current.style.display= "none";
-
-  }
+const Navigation = ({ navOpen, setNavOpen }) => {
+  const closeMenu = () => {
+    setNavOpen((prevState) => !prevState);
+  };
 
   return (
-    <nav className={styles.navigation} ref={navRef}>
+    <nav className={`${styles.navigation} ${navOpen ? styles.showMenu : ""} `}>
       <div className={styles.closeIcon}>
         <button onClick={closeMenu}>
           <MdClose />
         </button>
       </div>
       {items.map((item) => {
-        return <li key={item.to}>{item.name}</li>;
+        return (
+          <li key={item.to}>
+            <NavLink
+              end
+              to={item.to}
+              className={(navData) =>
+                navData.isActive ? styles.activeClass : styles.Color
+              }
+              onClick={() => setNavOpen((prevState) => !prevState)}
+            >
+              {item.name}
+            </NavLink>
+          </li>
+        );
       })}
     </nav>
   );
