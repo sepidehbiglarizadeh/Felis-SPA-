@@ -1,0 +1,47 @@
+.abouUsContainer {
+  padding: 2rem 1rem;
+}
+
+.aboutUsContent {
+  margin-bottom: 2rem;
+  /* font-size: 2rem; */
+}
+
+.aboutUsContent h3 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.aboutUsImgContainer {
+  border-radius: 200px 200px 0 0;
+  overflow: hidden;
+}
+
+.aboutUsImgContainer img {
+  width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  .abouUsContainer {
+    display: flex;
+    align-items: center;
+    padding: 2rem 4rem;
+  }
+  .aboutUsContent,
+  .aboutUsContent2 {
+    width: 50%;
+  }
+  .aboutUsContent2 {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .aboutUsImgContainer {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width:768px) {
+    .aboutUsContent p{ 
+        font-size: 2rem;
+    }
+}
