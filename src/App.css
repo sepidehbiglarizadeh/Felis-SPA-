@@ -17,7 +17,7 @@ h3 {
 }
 
 h3{
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
 }
 
@@ -29,3 +29,8 @@ a {
 .fixed{
   position: fixed;
 }
+
+.activeClass{
+  color: #fff;
+}
+
