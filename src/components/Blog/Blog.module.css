@@ -1,0 +1,25 @@
+.blogContainer{
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.blogContainer h4{
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.blogContainer p{
+    margin-bottom: 2.5rem;
+}
+
+.link{
+    color: #b45309;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width:640px) {
+    .blogContainer{
+        padding: 2rem 4rem;
+    }
+}
