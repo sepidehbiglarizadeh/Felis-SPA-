@@ -1,8 +1,14 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import styles from "./Blog.module.css";
+import queryString from "query-string";
 
 const Blog = () => {
   let { id } = useParams();
+  const {search}= useLocation();
+  const query= queryString.parse(search);
+
+  console.log(query);
+
 
   return (
     <section className={styles.blogContainer}>
